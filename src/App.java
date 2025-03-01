@@ -58,14 +58,14 @@ public class App {
     public static double t = 0.10; // time
     public static double[][][] T = new double[10][10][10]; // original array
     public static double[][][] DT= new double[10][10][10]; // change array
-    static final int MAX_T = 10;
+    //static final int MAX_T = 10;
  
     public static void main(String[] args){
         // Declerations
         double[][][] T = new double[10][10][10]; // original array
         double[][][] DT= new double[10][10][10]; // change array
         init(T); // initialize the original array with starting temp
-    //*
+    /*
 
         //ExecutorService pool = Executors.newFixedThreadPool(MAX_T);
 
@@ -93,10 +93,10 @@ public class App {
         //print(T);
         System.out.println("total r = "+r);
     }
-    //*/
+    */
  
 // single thread test
-/*
+//*
         // loops through 3D array and does operations based on the indece's location on the array
         while(T[5][5][5]<TA-10){
             for(int x=0;x<T.length;x++){ 
@@ -137,7 +137,7 @@ public class App {
         //print(T);
         System.out.println("total r = "+r);
     }
-*/
+//*/
 
 // sets array to have 72 starting temp
     private static void init(double[][][] a){
@@ -148,7 +148,6 @@ public class App {
                 }
             }
         }
-        return;
     }
 
     // resets array back to zero for next loop
@@ -160,7 +159,6 @@ public class App {
                 }
             }
         }
-        return;
     }
 
 /*
