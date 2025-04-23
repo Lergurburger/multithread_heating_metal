@@ -14,10 +14,9 @@ public class App {
     public static void main(String[] args){
         // Declerations
         init(T); // initialize the original array with starting temp
+        ForkJoinPool pool = new ForkJoinPool();
         while(T[25][25][25]<TA-10){
-            ForkJoinPool pool = new ForkJoinPool();
             pool.invoke(new ArrayTask(0,X));
-            pool.shutdown();
 
             // Add changes to original array
             for(int x=0;x<T.length;x++){
@@ -31,7 +30,7 @@ public class App {
             reset(DT);
             System.out.println("r = "+r+" | T[25][25][25] = "+T[25][25][25]);
         }
-
+        pool.shutdown();
         System.out.println("Processing complete:\n\ttotal r = "+r);
     }
 
